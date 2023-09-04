@@ -17,7 +17,7 @@ let &t_SR="\e[4 q"
 let &t_EI="\e[0 q"
 
 cd ~/prob_sol
-
+nnoremap <C-y>: !xclip -sel c < % <CR>
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address <CR>
 autocmd filetype cpp nnoremap <F10> :!%:r <CR>
 
