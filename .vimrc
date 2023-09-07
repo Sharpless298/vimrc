@@ -13,7 +13,7 @@ call plug#end()
 """ Appearance
 let g:startify_custom_header = []
 let g:startify_lists = [
-		  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+	  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ { 'type': 'files',     'header': ['   MRU']            },
           \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
           \ ]
