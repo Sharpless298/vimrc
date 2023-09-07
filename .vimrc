@@ -13,10 +13,10 @@ call plug#end()
 """ Appearance
 let g:startify_custom_header = []
 let g:startify_lists = [
-	  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-          \ { 'type': 'files',     'header': ['   MRU']            },
-          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-          \ ]
+      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+      \ { 'type': 'files',     'header': ['   MRU']            },
+      \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+      \ ]
 let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'s': '~/prob_sol'}, {'T': '~/TeX'}]
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
