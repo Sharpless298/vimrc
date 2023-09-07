@@ -3,22 +3,31 @@ set nocompatible
 """ Plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'mhinz/vim-startify'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'mhinz/vim-startify'
 Plug 'tribela/vim-transparent'
 call plug#end()
 
 """ Appearance
 let g:startify_custom_header = []
+let g:startify_lists = [
+		  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ { 'type': 'files',     'header': ['   MRU']            },
+          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+          \ ]
+let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'s': '~/prob_sol'}, {'T': '~/TeX'}]
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
 """ Basic Configuration
 colo tokyonight
+set autochdir
 set autoindent
 set belloff=all
 set clipboard^=unnamed,unnamedplus
+set incsearch
+set laststatus=2
 set number
 set shiftwidth=4
 set showcmd
