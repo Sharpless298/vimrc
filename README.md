@@ -4,4 +4,4 @@
 - [ ] yank to system cb
 - [ ] markdown
 
-- [ ] _vimrc
+- [x] _vimrc
