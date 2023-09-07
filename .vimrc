@@ -7,6 +7,7 @@ Plug 'mhinz/vim-startify'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tribela/vim-transparent'
+
 call plug#end()
 
 """ Appearance
@@ -22,6 +23,11 @@ let g:airline_theme = "tokyonight"
 
 """ Basic Configuration
 colo tokyonight
+
+let &t_SI="\e[5 q"
+let &t_SR="\e[4 q"
+let &t_EI="\e[0 q"
+
 set autochdir
 set autoindent
 set belloff=all
@@ -33,11 +39,8 @@ set shiftwidth=4
 set showcmd
 set tabstop=4
 set ttimeoutlen=0
-syntax on
 
-let &t_SI="\e[5 q"
-let &t_SR="\e[4 q"
-let &t_EI="\e[0 q"
+syntax on
 
 """ Keymaps
 nnoremap ya :!xclip -sel c < %<CR>
