@@ -3,8 +3,8 @@ set nocompatible
 """ Plugins
 call plug#begin('~/vimfiles/plugged')
 
-Plug 'mhinz/vim-startify'
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'yuttie/comfortable-motion.vim'
 
@@ -23,10 +23,10 @@ endif
 """ Appearance
 let g:startify_custom_header = []
 let g:startify_lists = [
-		  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-          \ { 'type': 'files',     'header': ['   MRU']            },
-          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-          \ ]
+	  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+      \ { 'type': 'files',     'header': ['   MRU']            },
+      \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+      \ ]
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
