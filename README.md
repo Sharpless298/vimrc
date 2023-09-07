@@ -1,3 +1,3 @@
-### Todo
+## Todo
 - [ ] _vimrc
 - [ ] short_ver.
