@@ -7,27 +7,23 @@ Plug 'mhinz/vim-startify'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tribela/vim-transparent'
+Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
 
 """ Appearance
 let g:startify_custom_header = []
 let g:startify_lists = [
-      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-      \ { 'type': 'files',     'header': ['   MRU']            },
-      \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-      \ ]
+		  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ { 'type': 'files',     'header': ['   MRU']            },
+          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+          \ ]
 let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'s': '~/prob_sol'}, {'T': '~/TeX'}]
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
 """ Basic Configuration
 colo tokyonight
-
-let &t_SI="\e[5 q"
-let &t_SR="\e[4 q"
-let &t_EI="\e[0 q"
-
 set autochdir
 set autoindent
 set belloff=all
@@ -39,8 +35,11 @@ set shiftwidth=4
 set showcmd
 set tabstop=4
 set ttimeoutlen=0
-
 syntax on
+
+let &t_SI="\e[5 q"
+let &t_SR="\e[4 q"
+let &t_EI="\e[0 q"
 
 """ Keymaps
 nnoremap ya :!xclip -sel c < %<CR>
