@@ -1,3 +1,5 @@
 ## Todo
+
 - [ ] _vimrc
-- [ ] short_ver.
+- [ ] .vimrc short_ver.
+- [ ] yank to system cb
