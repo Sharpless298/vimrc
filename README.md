@@ -1,2 +1,2 @@
 ### TodoList
-[] _vimrc
+[ ] _vimrc
