@@ -18,12 +18,17 @@ let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   MRU']            },
           \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
           \ ]
-let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'s': '~/prob_sol'}, {'T': '~/TeX'}]
+let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/TeX']
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
 """ Basic Configuration
 colo tokyonight
+
+let &t_SI="\e[5 q"
+let &t_SR="\e[4 q"
+let &t_EI="\e[0 q"
+
 set autochdir
 set autoindent
 set belloff=all
@@ -35,11 +40,8 @@ set shiftwidth=4
 set showcmd
 set tabstop=4
 set ttimeoutlen=0
-syntax on
 
-let &t_SI="\e[5 q"
-let &t_SR="\e[4 q"
-let &t_EI="\e[0 q"
+syntax on
 
 """ Keymaps
 nnoremap ya :!xclip -sel c < %<CR>
@@ -53,5 +55,5 @@ autocmd filetype tex nnoremap <F10> :!okular %:r.pdf <CR>
 " autocmd filetype tex nnoremap <F10> :!evince %:r.pdf <CR>
 
 """ Encoding
-set termencoding=utf-8
 set encoding=utf-8
+set termencoding=utf-8
