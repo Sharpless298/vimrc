@@ -3,28 +3,19 @@ set nocompatible
 """ Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'mhinz/vim-startify'
 Plug 'ghifarit53/tokyonight-vim'
-Plug 'vim-airline/vim-airline'
 Plug 'tribela/vim-transparent'
+Plug 'mhinz/vim-startify'
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
 Plug 'yuttie/comfortable-motion.vim'
+" Plug 'joker1007/vim-markdown-quote-syntax'
 
 call plug#end()
 
-""" Appearance
-let g:startify_custom_header = []
-let g:startify_lists = [
-		  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-          \ { 'type': 'files',     'header': ['   MRU']            },
-          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-          \ ]
-let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/TeX']
-let g:tokyonight_style = 'night' " available: night, storm
-let g:airline_theme = "tokyonight"
-
 """ Basic Configuration
 colo tokyonight
-
+			
 let &t_SI="\e[5 q"
 let &t_SR="\e[4 q"
 let &t_EI="\e[0 q"
@@ -41,18 +32,32 @@ set showcmd
 set tabstop=4
 set ttimeoutlen=0
 
-syntax on
+syntax enable
+
+""" Plugin configurations
+let g:startify_custom_header = []
+let g:startify_files_number = 3
+let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   MRU']            },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ ]
+let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/TeX']
+let g:tokyonight_style = 'night' " available: night, storm
+let g:airline_theme = "tokyonight"
 
 """ Keymaps
+
 nnoremap ya :!xclip -sel c < %<CR>
 
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address <CR>
-autocmd filetype cpp nnoremap <F10> :!./%:r <CR>
+nnoremap ntt :NERDTreeToggle<CR>
 
-autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
-autocmd filetype tex nnoremap <F10> :!okular %:r.pdf <CR> 
-" autocmd filetype tex nnoremap <F9>> :w <bar> !xelatex % <CR>
-" autocmd filetype tex nnoremap <F10> :!evince %:r.pdf <CR>
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address<CR>
+autocmd filetype cpp nnoremap <F10> :!./%:r<CR>
+
+autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex %<CR>
+autocmd filetype tex nnoremap <F10> :!okular %:r.pdf<CR> 
+" autocmd filetype tex nnoremap <F9>> :w <bar> !xelatex %<CR>
+" autocmd filetype tex nnoremap <F10> :!evince %:r.pdf<CR>
 
 """ Encoding
 set encoding=utf-8
