@@ -5,6 +5,7 @@ call plug#begin('~/vimfiles/plugged')
 
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'mhinz/vim-startify'
+Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'yuttie/comfortable-motion.vim'
 
@@ -19,16 +20,6 @@ if has('gui_running')
     " left scrollbar | right scrollbar | left scrollbar (split) | right scrollbar (split)
     set guifont=Consolas:h16 " for Windows
 endif
-
-""" Appearance
-let g:startify_custom_header = []
-let g:startify_lists = [
-	  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-      \ { 'type': 'files',     'header': ['   MRU']            },
-      \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-      \ ]
-let g:tokyonight_style = 'night' " available: night, storm
-let g:airline_theme = "tokyonight"
 
 """ Basic configurations
 colo tokyonight
@@ -50,14 +41,26 @@ set showcmd
 set tabstop=4
 set ttimeoutlen=0
 
-syntax on
+syntax enable
+
+""" Plugin configurations
+let g:startify_custom_header = []
+let g:startify_files_number = 3
+let g:startify_lists = [
+      \ { 'type': 'files',     'header': ['   MRU']            },
+ 	  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+      \ ]
+let g:startify_bookmarks = ['~/_vimrc', '~/CP']
+let g:tokyonight_style = 'night' " available: night, storm
+let g:airline_theme = "tokyonight"
 
 """ Keymaps
+nnoremap ya :%y<CR>
+
+nnoremap ntt :NERDTreeToggle<CR>
+
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
 autocmd filetype cpp nnoremap <F10> :!%:r<CR>
-
-" autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
-" autocmd filetype tex nnoremap <F10> :!okular %:r.pdf <CR> 
 
 """ Encoding
 set encoding=utf8
