@@ -3,6 +3,7 @@ set nocompatible
 """ Plugins
 call plug#begin('~/vimfiles/plugged')
 
+" Plug 'crusoexia/vim-monokai'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdtree'
@@ -22,7 +23,7 @@ if has('gui_running')
 endif
 
 """ Basic configurations
-colo tokyonight
+colorscheme tokyonight
 
 let &t_SI="\e[5 q"
 let &t_SR="\e[4 q"
@@ -44,6 +45,7 @@ set ttimeoutlen=0
 syntax enable
 
 """ Plugin configurations
+let g:tokyonight_style = 'night' " available: night, storm
 let g:startify_custom_header = []
 let g:startify_files_number = 3
 let g:startify_lists = [
@@ -51,7 +53,6 @@ let g:startify_lists = [
  	  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
       \ ]
 let g:startify_bookmarks = ['~/_vimrc', '~/CP']
-let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
 """ Keymaps
