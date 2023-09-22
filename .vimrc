@@ -3,6 +3,7 @@ set nocompatible
 """ Plugins
 call plug#begin('~/.vim/plugged')
 
+" Plug 'crusoexia/vim-monokai'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'tribela/vim-transparent'
 Plug 'mhinz/vim-startify'
@@ -41,13 +42,13 @@ let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   MRU']            },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
-let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/TeX']
+let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/TeX', {'ps': '~/Documents/problemset.md'}]
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
 """ Keymaps
 
-nnoremap ya :!xclip -sel c < %<CR>
+nnoremap ya :w <bar> !xclip -sel c < %<CR>
 
 nnoremap ntt :NERDTreeToggle<CR>
 
