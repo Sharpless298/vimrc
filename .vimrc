@@ -15,7 +15,7 @@ Plug 'yuttie/comfortable-motion.vim'
 call plug#end()
 
 """ Basic Configuration
-colo tokyonight
+colorscheme tokyonight
 			
 let &t_SI="\e[5 q"
 let &t_SR="\e[4 q"
@@ -31,18 +31,19 @@ set number
 set shiftwidth=4
 set showcmd
 set tabstop=4
+set termguicolors
 set ttimeoutlen=0
 
 syntax enable
 
 """ Plugin configurations
 let g:startify_custom_header = []
-let g:startify_files_number = 3
+let g:startify_files_number = 5
 let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   MRU']            },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
-let g:startify_bookmarks = ['~/.vimrc', '~/CompetitveProgramming', '~/TeX']
+let g:startify_bookmarks = ['~/.vimrc', '~/CompetitveProgramming', '~/Documents']
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
