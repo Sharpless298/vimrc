@@ -49,7 +49,8 @@ let g:airline_theme = "tokyonight"
 
 """ Keymaps
 
-nnoremap ya :w <bar> !xclip -sel c < %<CR>
+"nnoremap ya :w <bar> !wl-copy < %<CR>
+"nnoremap ya :w <bar> !xclip -sel c < %<CR>
 
 nnoremap ntt :NERDTreeToggle<CR>
 
