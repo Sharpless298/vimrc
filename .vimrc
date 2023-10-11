@@ -51,13 +51,14 @@ let g:airline_theme = "tokyonight"
 
 """ Keymaps
 
-"nnoremap ya :w <bar> !wl-copy < %<CR>
+nnoremap ya :w <bar> !wl-copy < %<CR>
 "nnoremap ya :w <bar> !xclip -sel c < %<CR>
 
 nnoremap ntt :NERDTreeToggle<CR>
 
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address<CR>
 autocmd filetype cpp nnoremap <F10> :!./%:r<CR>
+autocmd filetype cpp command! New execute "%d|r ~/CP/Template/default.cpp|1d|41"
 
 autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex %<CR>
 autocmd filetype tex nnoremap <F10> :!okular %:r.pdf<CR> 
