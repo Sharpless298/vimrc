@@ -45,7 +45,7 @@ let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   MRU']            },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
-let g:startify_bookmarks = ['~/.vimrc', '~/CompetitveProgramming', '~/Documents']
+let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/Documents']
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
