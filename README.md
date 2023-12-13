@@ -1,7 +1,7 @@
 ## Todo
 
 - [ ] .vimrc short_ver.
-- [ ] markdown
+- [ ] Markdown/LaTeX preview
 
 - [x] _vimrc
 
