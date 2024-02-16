@@ -32,8 +32,8 @@ set shiftwidth=4
 set showcmd
 set tabstop=4
 set termguicolors
+" set timeoutlen=0
 set ttimeoutlen=0
-
 syntax enable
 
 """ Plugin configurations
@@ -48,7 +48,7 @@ let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
 """ Keymaps
-nnoremap pavu :!pulsemixer<CR>
+" nnoremap pavu :!pulsemixer<CR>
 
 nnoremap ya :w <bar> !wl-copy < % <CR>
 " nnoremap ya :w <bar> !xclip -sel c < % <CR>
