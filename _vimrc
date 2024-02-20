@@ -19,11 +19,13 @@ if has('gui_running')
     " menu | tab page | toolbar
     set guioptions-=L | set guioptions-=R | set guioptions-=l | set guioptions-=r
     " left scrollbar | right scrollbar | left scrollbar (split) | right scrollbar (split)
-    set guifont=Consolas:h16 " for Windows
+    set guifont=Consolas:h13 " for Windows
 endif
 
 """ Basic configurations
 colorscheme tokyonight
+
+language en_US.UTF-8
 
 let &t_SI="\e[5 q"
 let &t_SR="\e[4 q"
@@ -41,7 +43,6 @@ set shiftwidth=4
 set showcmd
 set tabstop=4
 set ttimeoutlen=0
-
 syntax enable
 
 """ Plugin configurations
