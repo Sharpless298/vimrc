@@ -12,7 +12,7 @@ Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
 
-""" Basic Configuration
+""" Basic configuration
 colorscheme tokyonight
 
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
@@ -34,22 +34,27 @@ set tabstop=4
 set termguicolors
 " set timeoutlen=0
 set ttimeoutlen=0
+set encoding=utf-8
+set fileencoding=utf-8
+set termencoding=utf-8
+
 syntax enable
 
-""" Plugin configurations
+""" Plugin configuration
 let g:startify_custom_header = []
 let g:startify_files_number = 5
 let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   MRU']            },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
-let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/Documents', '~/CP/problemlist.md', '~/EnglishLearning']
+let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/Resources', '~/.config']
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
 """ Keymaps
 " nnoremap pavu :!pulsemixer<CR>
 
+nnoremap tS :tabnew<CR>:Startify<CR>
 nnoremap ya :w <bar> !wl-copy < % <CR>
 " nnoremap ya :w <bar> !xclip -sel c < % <CR>
 
@@ -65,7 +70,3 @@ autocmd filetype tex nnoremap <F10> :!zathura %:r.pdf <CR>
 " autocmd filetype tex nnoremap <F10> :!okular %:r.pdf <CR> 
 " autocmd filetype tex nnoremap <F10> :!evince %:r.pdf <CR>
 
-""" Encoding
-set encoding=utf-8
-set fileencoding=utf-8
-set termencoding=utf-8
