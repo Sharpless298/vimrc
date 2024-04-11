@@ -47,7 +47,7 @@ let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   MRU']            },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
-let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/Resources', '~/.config']
+let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/Resources', '~/.config', '~/TeX']
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 
@@ -64,8 +64,8 @@ autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wext
 autocmd filetype cpp nnoremap <F10> :!./%:r <CR>
 autocmd filetype cpp command! Default execute "%d|r ~/CP/Template/default.cpp|1d|41"
 
-autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
-" autocmd filetype tex nnoremap <F9>> :w <bar> !xelatex % <CR>
+" autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
+autocmd filetype tex nnoremap <F9> :w <bar> !xelatex % <CR>
 autocmd filetype tex nnoremap <F10> :!zathura %:r.pdf <CR>
 " autocmd filetype tex nnoremap <F10> :!okular %:r.pdf <CR> 
 " autocmd filetype tex nnoremap <F10> :!evince %:r.pdf <CR>
