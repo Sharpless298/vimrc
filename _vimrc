@@ -43,12 +43,16 @@ set shiftwidth=4
 set showcmd
 set tabstop=4
 set ttimeoutlen=0
+
+set encoding=utf8
+set fileencoding=utf8
+
 syntax enable
 
 """ Plugin configurations
 let g:tokyonight_style = 'night' " available: night, storm
 let g:startify_custom_header = []
-let g:startify_files_number = 3
+let g:startify_files_number = 5
 let g:startify_lists = [
       \ { 'type': 'files',     'header': ['   MRU']            },
  	  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
@@ -64,6 +68,5 @@ nnoremap ntt :NERDTreeToggle<CR>
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
 autocmd filetype cpp nnoremap <F10> :!%:r<CR>
 
-""" Encoding
-set encoding=utf8
-set fileencoding=utf8
+autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex %<CR>
+autocmd filetype tex nnoremap <F10> :!%:r.pdf<CR>
