@@ -22,7 +22,7 @@ if has('gui_running')
     set guifont=Consolas:h13 " for Windows
 endif
 
-""" Basic configurations
+""" Basic configuration
 colorscheme tokyonight
 
 language en_US.UTF-8
@@ -49,7 +49,7 @@ set fileencoding=utf8
 
 syntax enable
 
-""" Plugin configurations
+""" Plugin configuration
 let g:tokyonight_style = 'night' " available: night, storm
 let g:startify_custom_header = []
 let g:startify_files_number = 5
