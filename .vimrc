@@ -29,7 +29,7 @@ set belloff=all
 set clipboard^=unnamed,unnamedplus
 set incsearch
 set laststatus=2
-set number
+set relativenumber
 set shiftwidth=4
 set showcmd
 set tabstop=4
