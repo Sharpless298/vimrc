@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plug 'crusoexia/vim-monokai'
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
@@ -70,5 +70,6 @@ autocmd filetype cpp command! Default execute "%d|r ~/CP/Template/default.cpp|1d
 
 autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
 " autocmd filetype tex nnoremap <F9>> :w <bar> !xelatex % <CR>
-autocmd filetype tex nnoremap <F10> :!zathura %:r.pdf <CR>
+autocmd filetype tex nnoremap <F10> :!zathura %:r.pdf & <CR><CR>
+" autocmd filetype tex nnoremap <F11> :!latexmk -pvc -pdf % & <CR>
 " autocmd filetype tex nmap <F10> \ll
