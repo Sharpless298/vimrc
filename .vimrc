@@ -3,6 +3,7 @@ set nocompatible
 """ Plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'Stoozy/vimcord'
 " Plug 'crusoexia/vim-monokai'
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 " Plug 'lervag/vimtex'
@@ -29,7 +30,9 @@ set belloff=all
 set clipboard^=unnamed,unnamedplus
 set incsearch
 set laststatus=2
+set numberwidth=4
 set relativenumber
+set scrolloff=0
 set shiftwidth=4
 set showcmd
 set tabstop=4
@@ -55,6 +58,9 @@ let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 let g:vimtex_view_method = 'zathura'
 " let g:livepreview_previewer = 'zathura'
+let g:vimcord_show_workspace = 'false'
+let g:comfortable_motion_scroll_down_key = "j"
+let g:comfortable_motion_scroll_up_key = "k"
 
 """ Keymaps
 nnoremap !pm :!pulsemixer<CR>
@@ -64,6 +70,8 @@ nnoremap ya :w <bar> !wl-copy < % <CR>
 
 nnoremap ntt :NERDTreeToggle<CR>
 
+" nnoremap <C-n> :tabnew<CR>:Startify <CR>
+
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address <CR>
 autocmd filetype cpp nnoremap <F10> :!./%:r <CR>
 autocmd filetype cpp command! Default execute "%d|r ~/CP/Template/default.cpp|1d|41"
@@ -71,5 +79,6 @@ autocmd filetype cpp command! Default execute "%d|r ~/CP/Template/default.cpp|1d
 autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
 " autocmd filetype tex nnoremap <F9>> :w <bar> !xelatex % <CR>
 autocmd filetype tex nnoremap <F10> :!zathura %:r.pdf & <CR><CR>
+
 " autocmd filetype tex nnoremap <F11> :!latexmk -pvc -pdf % & <CR>
 " autocmd filetype tex nmap <F10> \ll
