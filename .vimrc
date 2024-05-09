@@ -3,7 +3,6 @@ set nocompatible
 """ Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'Stoozy/vimcord'
 " Plug 'crusoexia/vim-monokai'
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 " Plug 'lervag/vimtex'
@@ -58,7 +57,6 @@ let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 let g:vimtex_view_method = 'zathura'
 " let g:livepreview_previewer = 'zathura'
-let g:vimcord_show_workspace = 'false'
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
 
