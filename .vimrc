@@ -31,7 +31,7 @@ set incsearch
 set laststatus=2
 set numberwidth=4
 set relativenumber
-set scrolloff=0
+set scrolloff=5
 set shiftwidth=4
 set showcmd
 set tabstop=4
@@ -70,9 +70,13 @@ nnoremap ntt :NERDTreeToggle<CR>
 
 " nnoremap <C-n> :tabnew<CR>:Startify <CR>
 
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address <CR>
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++98 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address <CR>
 autocmd filetype cpp nnoremap <F10> :!./%:r <CR>
-autocmd filetype cpp command! Default execute "%d|r ~/CP/Template/default.cpp|1d|41"
+
+autocmd filetype cpp command! Default execute "%d|r ~/CP/templates/default.cpp|1d|41"
+autocmd filetype cpp command! DSU execute "%d|r ~/CP/templates/DSU.cpp|1d|41"
+autocmd filetype cpp command! LCA execute "%d|r ~/CP/templates/LCA.cpp|1d|41"
+autocmd filetype cpp command! FPOW execute "%d|r ~/CP/templates/fpow.cpp|1d|41"
 
 autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
 " autocmd filetype tex nnoremap <F9>> :w <bar> !xelatex % <CR>
