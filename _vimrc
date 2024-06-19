@@ -22,7 +22,7 @@ if has('gui_running')
     set guifont=Consolas:h13 " for Windows
 endif
 
-""" Basic configuration
+""" Basic configurations
 colorscheme tokyonight
 
 language en_US.UTF-8
@@ -39,6 +39,7 @@ set clipboard^=unnamed,unnamedplus
 set incsearch
 set laststatus=2
 set number
+set scrolloff=5
 set shiftwidth=4
 set showcmd
 set tabstop=4
@@ -49,9 +50,9 @@ set fileencoding=utf8
 
 syntax enable
 
-""" Plugin configuration
+""" Plugin configurations
 let g:tokyonight_style = 'night' " available: night, storm
-let g:startify_custom_header = []
+let g:startify_custom_header = ['    2400']
 let g:startify_files_number = 5
 let g:startify_lists = [
       \ { 'type': 'files',     'header': ['   MRU']            },
@@ -65,7 +66,7 @@ nnoremap ya :%y<CR>
 
 nnoremap ntt :NERDTreeToggle<CR>
 
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456<CR>
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wl,--stack,268435456<CR>
 autocmd filetype cpp nnoremap <F10> :!%:r<CR>
 
 autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex %<CR>
