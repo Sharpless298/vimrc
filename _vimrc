@@ -9,6 +9,7 @@ Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
