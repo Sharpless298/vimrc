@@ -11,8 +11,10 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'octol/vim-cpp-enhanced-highlight'
-
+" Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'bfrg/vim-cpp-modern'
+Plug 'rlue/vim-barbaric'
+Plug 'preservim/vim-markdown'
 call plug#end()
 
 """ Basic Configuration
@@ -72,12 +74,13 @@ nnoremap ntt :NERDTreeToggle<CR>
 
 " nnoremap <C-n> :tabnew<CR>:Startify <CR>
 
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address<CR>
-autocmd filetype cpp nnoremap <F10> :!./%:r<CR>
-
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address <CR>
+autocmd filetype cpp nnoremap <F10> :!./%:r <CR>
 autocmd filetype cpp command! Default execute "%d|r ~/CP/templates/default.cpp|1d|41"
 command! TEMP execute "tabnew ~/CP/temp.cpp"
 command! TEMP2 execute "tabnew ~/CP/temp2.cpp"
+
+autocmd filetype python nnoremap <F9> :w <bar> !python3 % <CR>
 
 autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
 " autocmd filetype tex nnoremap <F9>> :w <bar> !xelatex % <CR>
