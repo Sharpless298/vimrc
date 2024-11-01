@@ -11,10 +11,9 @@ Plug 'mhinz/vim-startify'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'yuttie/comfortable-motion.vim'
-" Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'rlue/vim-barbaric'
-" Plug 'preservim/vim-markdown'
+Plug 'preservim/vim-markdown'
 call plug#end()
 
 """ Basic Configuration
@@ -55,7 +54,7 @@ let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   MRU']            },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
-let g:startify_bookmarks = ['~/.vimrc', '~/CP', '~/TeX']
+let g:startify_bookmarks = ['~/.vimrc', '~/.config/hypr/', '~/CP', '~/TeX']
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 let g:vimtex_view_method = 'zathura'
@@ -74,7 +73,7 @@ nnoremap ntt :NERDTreeToggle<CR>
 
 " nnoremap <C-n> :tabnew<CR>:Startify <CR>
 
-autocmd filetype c nnoremap <F9> :w <bar> !gcc % -o %:r <CR>
+autocmd filetype c nnoremap <F9> :w <bar> !gcc % -o %:r -lm -Wall -Wextra -Wconversion -Wshadow <CR>
 autocmd filetype c nnoremap <F10> :!./%:r <CR>
 
 autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=undefined -fsanitize=address <CR>
