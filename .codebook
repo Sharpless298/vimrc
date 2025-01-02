@@ -1,0 +1,4 @@
+set ai nu nw=4 ts=4 sw=4 so=5 bs=2 ls=2 mouse=a
+
+map <F9> :w <bar> !g++ -std=c++17 % -o %:r -Wall -Wextra -Wconversion -Wshadow -fsanitize=address,undefined <CR>
+map <F10> :!./%:r <CR>
