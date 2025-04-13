@@ -7,12 +7,15 @@ call plug#begin('~/.vim/plugged')
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 " Plug 'lervag/vimtex'
 Plug 'ap/vim-css-color'
+Plug 'ryanoasis/vim-devicons'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'mhinz/vim-startify'
+Plug 'tribela/vim-transparent'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'yuttie/comfortable-motion.vim'
-Plug 'bfrg/vim-cpp-modern'
+" Plug 'bfrg/vim-cpp-modern'
+Plug 'sheerun/vim-polyglot'
 Plug 'rlue/vim-barbaric'
 Plug 'preservim/vim-markdown'
 call plug#end()
