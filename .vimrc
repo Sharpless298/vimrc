@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plug 'crusoexia/vim-monokai'
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-" Plug 'lervag/vimtex'
+Plug 'lervag/vimtex'
 Plug 'ap/vim-css-color'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ghifarit53/tokyonight-vim'
@@ -62,13 +62,13 @@ let g:startify_bookmarks = ['~/.vimrc', '~/.config/hypr/', '~/CP', '~/TeX']
 let g:tokyonight_style = 'night' " available: night, storm
 let g:airline_theme = "tokyonight"
 let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_forward_search_on_start = 0
+let g:vimtex_view_automatic = 0
 " let g:livepreview_previewer = 'zathura'
 let g:comfortable_motion_scroll_down_key = "j"
 let g:comfortable_motion_scroll_up_key = "k"
-
 """ Keymaps
 " inoremap jk <Esc>
-nnoremap !pm :!pulsemixer<CR>
 
 nnoremap ya :w <bar> !wl-copy < % <CR>
 " nnoremap ya :w <bar> !xclip -sel c < % <CR>
@@ -93,9 +93,8 @@ command! TEMP2 execute "tabnew ~/CP/temp2.cpp"
 
 autocmd filetype python nnoremap <F9> :w <bar> !python3 % <CR>
 
-autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
+" autocmd filetype tex nnoremap <F9> :w <bar> !pdflatex % <CR>
+autocmd filetype tex nmap <F9> \ll
 " autocmd filetype tex nnoremap <F9> :w <bar> !xelatex % <CR>
-autocmd filetype tex nnoremap <F10> :!zathura %:r.pdf & <CR><CR>
-
-" autocmd filetype tex nnoremap <F11> :!latexmk -pvc -pdf % & <CR>
-" autocmd filetype tex nmap <F10> \ll
+" autocmd filetype tex nmap <F10> \lv
+autocmd filetype tex noremap <F10> :!zathura %:r.pdf &<CR><CR>
