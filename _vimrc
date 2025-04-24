@@ -1,3 +1,14 @@
+if empty(glob('~\vimfiles\autoload\plug.vim'))
+
+silent ! powershell -Command "
+\ New-Item -Path ~\vimfiles -Name autoload -Type Directory -Force;
+\ Invoke-WebRequest
+\ -Uri 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+\ -OutFile ~\vimfiles\autoload\plug.vim
+\ "
+autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 set nocompatible
 
 """ Plugins
