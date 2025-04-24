@@ -1,5 +1,4 @@
 if empty(glob('~\vimfiles\autoload\plug.vim'))
-
 silent ! powershell -Command "
 \ New-Item -Path ~\vimfiles -Name autoload -Type Directory -Force;
 \ Invoke-WebRequest
