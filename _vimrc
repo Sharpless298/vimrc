@@ -63,13 +63,12 @@ syntax enable
 
 """ Plugin configurations
 let g:tokyonight_style = 'night' " available: night, storm
-let g:startify_custom_header = ['    2400']
 let g:startify_files_number = 5
 let g:startify_lists = [
       \ { 'type': 'files',     'header': ['   MRU']            },
  	  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
       \ ]
-let g:startify_bookmarks = ['~/_vimrc', '~/CP']
+let g:startify_bookmarks = ['~/_vimrc']
 let g:airline_theme = "tokyonight"
 
 """ Keymaps
